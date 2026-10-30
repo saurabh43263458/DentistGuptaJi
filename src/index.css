@@ -1,0 +1,93 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --sky-100: #DCEFF7;
+    --sky-200: #BFE3F2;
+    --mint-100: #D6EFE3;
+    --mint-300: #B7E4CC;
+    --deep: #1F5A4A;
+    --deep-hover: #17483B;
+    --link: #1F6F99;
+    --ink: #0F3B4A;
+    --body: #33525C;
+    --ground: #F6FBFC;
+    --card-border: #DCEFF7;
+    --font-heading: 'Outfit', sans-serif;
+    --font-body: 'Inter', system-ui, -apple-system, sans-serif;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    font-family: var(--font-body);
+    background-color: var(--ground);
+    color: var(--body);
+  }
+
+  body {
+    overflow-x: hidden;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  }
+
+  h1, h2, h3, h4, h5, h6, .font-heading {
+    font-family: var(--font-heading);
+    letter-spacing: -0.02em;
+    color: var(--ink);
+  }
+}
+
+/* Custom design token utility classes */
+.bg-ground { background-color: var(--ground); }
+.bg-sky-50 { background-color: #EDF7FA; }
+.bg-sky-100 { background-color: var(--sky-100); }
+.bg-sky-200 { background-color: var(--sky-200); }
+.bg-mint-100 { background-color: var(--mint-100); }
+.bg-mint-300 { background-color: var(--mint-300); }
+.bg-deep { background-color: var(--deep); }
+.bg-deep-hover:hover { background-color: var(--deep-hover); }
+.bg-ink { background-color: var(--ink); }
+
+.text-ink { color: var(--ink); }
+.text-body { color: var(--body); }
+.text-deep { color: var(--deep); }
+.text-link { color: var(--link); }
+.text-mint-300 { color: var(--mint-300); }
+
+.border-sky-100 { border-color: var(--sky-100); }
+.border-mint-100 { border-color: var(--mint-100); }
+
+/* Soft Medical Glow & Pill Elements */
+.shadow-soft {
+  box-shadow: 0 10px 30px -5px rgba(15, 59, 74, 0.08);
+}
+
+.shadow-card {
+  box-shadow: 0 8px 24px rgba(15, 59, 74, 0.08);
+}
+
+.shadow-elevated {
+  box-shadow: 0 20px 40px -15px rgba(15, 59, 74, 0.14);
+}
+
+.shadow-pill {
+  box-shadow: 0 4px 14px rgba(31, 90, 74, 0.25);
+}
+
+/* Radial Soft Background Glows */
+.bg-radial-clinic {
+  background: radial-gradient(circle at 50% 20%, rgba(191, 227, 242, 0.35) 0%, rgba(214, 239, 227, 0.2) 45%, transparent 70%);
+}
+
+.bg-radial-mint {
+  background: radial-gradient(circle at center, rgba(183, 228, 204, 0.4) 0%, transparent 70%);
+}
+
+/* Hide scrollbars for clean tab/carousel lists */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
